@@ -1,0 +1,90 @@
+/* Body na mtindo wa jumla */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #000000, #900000, #ffffff);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Makopa kopa - moyo midogo inayoanguka */
+.heart {
+  position: fixed;
+  top: -30px; /* Anza juu nje ya screen */
+  font-size: 1.5rem;
+  opacity: 0.8;
+  user-select: none;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  filter: drop-shadow(0 0 2px rgba(255,0,0,0.7));
+}
+
+/* Rangi za makopa kopa, zitabadilika kwa random kwa JS */
+.heart.red {
+  color: #ff4d4d;
+  filter: drop-shadow(0 0 4px #ff0000);
+}
+.heart.black {
+  color: #222222;
+  filter: drop-shadow(0 0 3px #000000);
+}
+.heart.white {
+  color: #ffffff;
+  filter: drop-shadow(0 0 4px #ffffff);
+}
+
+/* Animation ya kuanguka na kuzunguka */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Container */
+.container {
+  padding: 3em;
+  text-align: center;
+}
+
+/* Headers */
+h1, h2 {
+  color: #ff4d4d;
+}
+
+/* Links */
+.links a, a {
+  display: inline-block;
+  margin: 1em;
+  padding: 0.8em 1.5em;
+  background-color: #900;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #900;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
